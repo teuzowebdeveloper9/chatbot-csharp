@@ -44,5 +44,24 @@ namespace backend.chatbot.controllers
 
       return Ok(user);
     }
+    [HttpDelete("delete/{id}")]
+    public async Task<IActionResult> Delete([FromRoute] DeleteUserDto dto)
+    {
+      if (!ModelState.IsValid)
+        return BadRequest(ModelState);
+
+      try
+      {
+        var user = await _userService.DeleteUserAsync(dto);
+        if (user == null)
+          return NotFound("Usuário não encontrado");
+
+        return NoContent();
+      }
+      catch (Exception ex)
+      {
+        return StatusCode(500, ex.Message);
+      }
+    }
   }
 }

@@ -53,5 +53,20 @@ namespace backend.chatbot.services
 
       return user;
     }
+    public async Task<User> DeleteUserAsync(DeleteUserDto deleteUserDto)
+    {
+      var user = await context.Users
+        .FirstOrDefaultAsync(u => u.Id == deleteUserDto.Id);
+
+      if (user == null)
+      {
+        throw new ArgumentException("User not found");
+      }
+
+      context.Users.Remove(user);
+      await context.SaveChangesAsync();
+
+      return user;
+    }
   }
 }
