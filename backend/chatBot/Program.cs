@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppContextPostgres>();
 
-builder.Services.AddDbContext<AppContextMongo>();
+builder.Services.AddSingleton<AppContextMongo>();
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

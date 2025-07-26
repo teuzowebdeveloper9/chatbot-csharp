@@ -6,13 +6,18 @@ namespace backend.chatbot.data
 {
   public class AppContextMongo
   {
-    private readonly ImongoDatabase database;
+    private readonly IMongoDatabase database;
 
-    public AppContextMongo(Iconfiguration configuration)
+    public AppContextMongo(IConfiguration configuration)
     {
-      string connetionString = "mongodb://teuzo:teuzo123@localhost:27017";
-      var Client = new MongoClient(connetionString);
-      database = Client.GetDatabase("chatbotdb");
+      string connectionString = "mongodb://teuzo:teuzo123@localhost:27017";
+      var client = new MongoClient(connectionString);
+      database = client.GetDatabase("chatbotdb");
+    }
+
+    public IMongoDatabase GetDatabase()
+    {
+      return database;
     }
   }
 }
