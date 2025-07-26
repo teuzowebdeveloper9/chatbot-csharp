@@ -13,6 +13,10 @@ builder.Services.AddDbContext<AppContextPostgres>();
 
 builder.Services.AddSingleton<AppContextMongo>();
 
+var apiKey = "AIzaSyDzvqMpVCpPvjTEH21y786AuScb6aj5ydU";
+
+builder.Services.AddSingleton(new GeminiApiClient(new HttpClient(), apiKey));
+
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();

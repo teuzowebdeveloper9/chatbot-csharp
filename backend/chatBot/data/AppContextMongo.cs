@@ -19,5 +19,8 @@ namespace backend.chatbot.data
     {
       return database;
     }
+
+    public IMongoCollection<ChatSession> ChatSessions => database.GetCollection<ChatSession>("chatSessions");
+
   }
 }
