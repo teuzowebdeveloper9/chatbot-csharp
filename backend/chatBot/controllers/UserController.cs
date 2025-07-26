@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using backend.chatbot.models;
-using backend.chatbot.data;
 using backend.chatbot.DTOs;
-using BCrypt.Net;
-using Microsoft.EntityFrameworkCore;
+using backend.chatbot.services;
 
 namespace backend.chatbot.controllers
 {
@@ -11,73 +8,41 @@ namespace backend.chatbot.controllers
   [Route("api/users")]
   public class UserController : ControllerBase
   {
-    [HttpPost]
-    [Route("register")]
-    public async Task<IActionResult> PostAsync(
-      [FromServices] AppContextPostgres context,
-      [FromBody] CreateUserDto userCreate)
+    private readonly UserService _userService;
+
+    public UserController(UserService userService)
+    {
+      _userService = userService;
+    }
+
+    [HttpPost("register")]
+    public async Task<IActionResult> Register([FromBody] CreateUserDto dto)
     {
       if (!ModelState.IsValid)
         return BadRequest(ModelState);
 
       try
       {
-        string PasswordHash = BCrypt
-        .Net
-        .BCrypt
-        .HashPassword(userCreate.Password);
-
-        var User = new User
-        {
-          Name = userCreate.Name,
-          Email = userCreate.Email,
-          Password = PasswordHash
-        };
-
-        var Entry = await context.Users.AddAsync(User);
-        await context.SaveChangesAsync();
-
-        var SavedUser = Entry.Entity;
-
-        return Created(
-          $"/api/user/{SavedUser.Id}", SavedUser
-        );
+        var user = await _userService.RegisterUserAsync(dto);
+        return Created($"/api/user/{user.Id}", user);
       }
-      catch (Exception e)
+      catch (Exception ex)
       {
-        return StatusCode(500, e.Message);
+        return StatusCode(500, ex.Message);
       }
     }
-    [HttpPost]
-    [Route("login")]
-    public async Task<IActionResult> LoginAsync([FromServices] AppContextPostgres context,
-      [FromBody] LoginUserDto userLogin)
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginUserDto dto)
     {
       if (!ModelState.IsValid)
         return BadRequest(ModelState);
 
-      try
-      {
-        var User = await context
-        .Users
-        .FirstOrDefaultAsync(U => U.Email == userLogin.Email);
+      var user = await _userService.LoginUserAsync(dto);
+      if (user == null)
+        return Unauthorized("E-mail ou senha inválidos");
 
-        if (User == null)
-          return NotFound("User not found");
-
-        bool PasswordMatch = BCrypt
-                             .Net
-                             .BCrypt
-                             .Verify(userLogin.Password, User.Password);
-
-        if (!PasswordMatch) return Unauthorized("Invalid password");
-
-        return Ok(User);
-      }
-      catch (Exception e)
-      {
-        return StatusCode(500, e.Message);
-      }
+      return Ok(user);
     }
   }
 }

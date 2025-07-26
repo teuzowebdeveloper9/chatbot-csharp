@@ -1,6 +1,9 @@
 using backend.chatbot.data;
+using backend.chatbot.services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<UserService>();
 
 builder.Services.AddControllers();
 
