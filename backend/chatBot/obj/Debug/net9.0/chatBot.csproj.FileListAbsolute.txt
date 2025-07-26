@@ -6,8 +6,6 @@ C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\chatBot.de
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\chatBot.runtimeconfig.json
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\chatBot.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\chatBot.pdb
-C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\AWSSDK.Core.dll
-C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\AWSSDK.SecurityToken.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\BCrypt.Net-Next.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\Castle.Core.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\DnsClient.dll
@@ -39,8 +37,6 @@ C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\Microsoft.
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\MongoDB.Bson.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\MongoDB.Driver.dll
-C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\MongoDB.Driver.Core.dll
-C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\MongoDB.Libmongocrypt.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\Mono.TextTemplating.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\Moq.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\Npgsql.dll
@@ -119,9 +115,6 @@ C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\ru\Microso
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\runtimes\linux\native\libmongocrypt.so
-C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\runtimes\osx\native\libmongocrypt.dylib
-C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\runtimes\win\native\mongocrypt.dll
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\obj\Debug\net9.0\chatBot.csproj.AssemblyReference.cache
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\obj\Debug\net9.0\rpswa.dswa.cache.json
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\obj\Debug\net9.0\chatBot.GeneratedMSBuildEditorConfig.editorconfig

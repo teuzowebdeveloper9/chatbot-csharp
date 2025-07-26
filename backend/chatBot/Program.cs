@@ -1,9 +1,35 @@
 using backend.chatbot.data;
 using backend.chatbot.services;
+using backend.chatbot.utils;
+using MongoDB.Driver;
+using backend.chatbot.models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddSingleton<IMongoClient>(sp =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("MongoDb");
+    return new MongoClient(connectionString);
+});
+
+builder.Services.AddScoped<IMongoDatabase>(sp =>
+{
+    var mongoClient = sp.GetRequiredService<IMongoClient>();
+    return mongoClient.GetDatabase("chatbot"); // Use o nome real do seu banco
+});
+
+builder.Services.AddScoped<IMongoCollection<ChatSession>>(sp =>
+{
+    var database = sp.GetRequiredService<IMongoDatabase>();
+    return database.GetCollection<ChatSession>("ChatSessions"); // Use o nome real da coleção
+});
+
+
+
 builder.Services.AddScoped<UserService>();
+
+builder.Services.AddScoped<ChatBotService>();
 
 builder.Services.AddHttpClient();
 
