@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "wyKRJLCA3+E=",
+  "dgSpecHash": "do646sAzVj8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatBot\\chatBot.csproj",
+  "projectFilePath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatbot\\chatBot.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mateu\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",

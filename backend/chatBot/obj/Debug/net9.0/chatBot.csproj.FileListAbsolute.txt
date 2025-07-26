@@ -127,3 +127,11 @@ C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\obj\Debug\net9.0\refint\cha
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\obj\Debug\net9.0\chatBot.pdb
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\obj\Debug\net9.0\chatBot.genruntimeconfig.cache
 C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\obj\Debug\net9.0\ref\chatBot.dll
+C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\DnsClient.dll
+C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\MongoDB.Bson.dll
+C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\MongoDB.Driver.dll
+C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\SharpCompress.dll
+C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\Snappier.dll
+C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\bin\Debug\net9.0\ZstdSharp.dll
+C:\Users\mateu\Desktop\teste-tecnico\backend\chatbot\obj\Debug\net9.0\chatBot.sourcelink.json

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatBot\\chatBot.csproj": {}
+    "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatbot\\chatBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatBot\\chatBot.csproj": {
+    "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatbot\\chatBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatBot\\chatBot.csproj",
+        "projectUniqueName": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatbot\\chatBot.csproj",
         "projectName": "chatBot",
-        "projectPath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatBot\\chatBot.csproj",
+        "projectPath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatbot\\chatBot.csproj",
         "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatBot\\obj\\",
+        "outputPath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatbot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.7, )"
