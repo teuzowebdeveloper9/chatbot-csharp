@@ -5,9 +5,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<UserService>();
 
+builder.Services.AddHttpClient();
+
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppContextPostgres>();
+
+builder.Services.AddDbContext<AppContextMongo>();
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
