@@ -9,26 +9,13 @@ import { LuBrain } from 'react-icons/lu';
 import { AiOutlineThunderbolt } from 'react-icons/ai';
 import { FaTools } from 'react-icons/fa';
 import { LightPoints } from './lightPoints';
+import { LandingPagesIcons } from './LandingPagesIcons';
 
 export function HomeComponent({ onClink }: HomeProps) {
   return (
     <div className="relative flex min-h-screen w-full overflow-x-hidden flex-col items-center justify-start bg-gradient-to-r from-[#1005d8] via-[#080736] to-[#000000] text-stone-200 px-5">
       <LightPoints />
-      <LuBrain size={30} className="text-stone-200 relative top-55 left-105" />
-      <AiOutlineThunderbolt
-        size={30}
-        className="text-stone-200 relative top-65 left-105"
-      />
-      <FaTools size={30} className="text-stone-200 relative top-75 left-105" />
-      <LuBrain
-        size={30}
-        className="text-stone-200 relative top-35  right-105"
-      />
-      <AiOutlineThunderbolt
-        size={30}
-        className="text-stone-200 relative top-45 right-105"
-      />
-      <FaTools size={30} className="text-stone-200 relative top-55 right-105" />
+      <LandingPagesIcons />
 
       <h1 className="flex flex-row gap-4 text-3xl font-bold mt-6 mb-4 z-10 text-stone-200">
         chat bot AI <FaBrain />
