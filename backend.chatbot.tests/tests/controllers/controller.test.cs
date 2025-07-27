@@ -91,10 +91,10 @@ namespace backend.chatbot.tests.controllers
         .Setup(us => us.DeleteUserAsync(dto))
         .ReturnsAsync(deletedUser);
 
-      // Act
+
       var result = await _controller.Delete(dto);
 
-      // Assert
+
       Assert.IsType<NoContentResult>(result);
     }
 
