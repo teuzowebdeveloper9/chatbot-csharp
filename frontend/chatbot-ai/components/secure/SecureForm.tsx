@@ -6,20 +6,30 @@ import { HandleLogin } from '../../utils/handleLogin';
 import { HandleRegister } from '../../utils/handleRegister';
 import { MobileLeadingPageIcons } from './MobileLeadingPageIcons';
 import { SmallButton } from './SmallButton';
+import { number } from 'zod';
+
 
 
 export function SecureForm({ login, onClick }: LoginFormProps) {
+
   const [form,setForm] = useState({
     name: '',
     email: '',
     password: ''
   })
+  const [data,setData] = useState({
+    status : number,
+    data : {}
+  })
+
   const handleChange = (event : React.ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
     setForm({
       ...form,
       [event.target.name]: event.target.value
     });
   }
+
 
   return (
     <>
@@ -66,7 +76,17 @@ export function SecureForm({ login, onClick }: LoginFormProps) {
         >
         
         </input>
-        <SmallButton label={login ? "login" : "register"} onClink={login ? HandleLogin({Email : form.email, Password : form.password}) : HandleRegister({Email : form.email,Name : form.name,Password : form.password})} />
+        <SmallButton
+          label={login ? "login" : "register"}
+          onClick={
+           
+            login
+              ? () => HandleLogin({ Email: form.email, Password: form.password })
+              : () => HandleRegister({ Email: form.email, Name: form.name, Password: form.password })
+          }
+
+          
+        />
         <p
           onClick={onClick}
           className="text-sm font-semibold text-stone-200 hover:underline cursor-pointer"

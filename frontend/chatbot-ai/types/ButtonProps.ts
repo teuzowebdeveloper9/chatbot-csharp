@@ -1,4 +1,6 @@
+import { AnyARecord } from "node:dns";
+
 export type ButtonProps = {
-  onClink: () => void | Promise<void>;
+  onClick: () => any | Promise<AnyARecord>;
   label: string;
 };
