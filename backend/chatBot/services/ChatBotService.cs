@@ -60,7 +60,7 @@ namespace backend.chatbot.services
       var botMsg = new Message
       {
         Role = "bot",
-        Content = botResponse
+        Content = GeminiResponseParser.ExtractMessage(botResponse)
       };
 
       var update = Builders<ChatSession>.Update.PushEach(s => s.Messages, new[] { userMsg, botMsg });
