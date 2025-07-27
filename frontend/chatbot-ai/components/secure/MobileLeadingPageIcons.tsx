@@ -7,10 +7,10 @@ export function MobileLeadingPageIcons() {
     <div className="flex md:hidden flex-row justify-center items-center gap-2 mb-5">
       <AiOutlineThunderbolt
         size={30}
-        className="text-stone-200 my-1 mx-2  relative "
+        className="text-stone-200 my-1 mx-2 animate-float-slow relative "
       />
-      <FaTools size={30} className="text-stone-200 my-1 mx-2  relative " />
-      <LuBrain size={30} className="text-stone-200  my-1 mx-2 relative" />
+      <FaTools size={30} className="text-stone-200 animate-float-slow my-1 mx-2  relative " />
+      <LuBrain size={30} className="text-stone-200  animate-float-slow my-1 mx-2 relative" />
     </div>
   );
 }

@@ -1,4 +1,4 @@
 export type ButtonProps = {
-  onClink: () => void;
+  onClink: () => void | Promise<void>;
   label: string;
 };
