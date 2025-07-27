@@ -19,6 +19,17 @@ builder.Services.AddScoped<IMongoDatabase>(sp =>
     return mongoClient.GetDatabase("chatbot"); // Use o nome real do seu banco
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 builder.Services.AddScoped<IMongoCollection<ChatSession>>(sp =>
 {
     var database = sp.GetRequiredService<IMongoDatabase>();
@@ -49,6 +60,10 @@ builder.Services.AddOpenApi();
 
 
 var app = builder.Build();
+
+app.UseCors("AllowAll");
+
+app.UseAuthorization();
 
 app.MapControllers();
 
