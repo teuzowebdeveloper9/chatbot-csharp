@@ -27,7 +27,7 @@ export function HomeComponent({ onClink }: HomeProps) {
         </p>
       </div>
       <OpinionsCarrousel />
-      <Button label="make your account" onClick={onClink}/>
+      <Button label="make your account" onClick={onClink} />
       <Instructions />
       <Footer />
     </div>

@@ -9,8 +9,14 @@ export function MobileLeadingPageIcons() {
         size={30}
         className="text-stone-200 my-1 mx-2 animate-float-slow relative "
       />
-      <FaTools size={30} className="text-stone-200 animate-float-slow my-1 mx-2  relative " />
-      <LuBrain size={30} className="text-stone-200  animate-float-slow my-1 mx-2 relative" />
+      <FaTools
+        size={30}
+        className="text-stone-200 animate-float-slow my-1 mx-2  relative "
+      />
+      <LuBrain
+        size={30}
+        className="text-stone-200  animate-float-slow my-1 mx-2 relative"
+      />
     </div>
   );
 }

@@ -1,5 +1,5 @@
+import { MainComponent } from '../../../components/main/MainComponent';
+
 export default function HomePage() {
-  return (
-    <h1>oiiiii</h1>
-  )
+  return <MainComponent />;
 }
