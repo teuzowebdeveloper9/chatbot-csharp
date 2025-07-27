@@ -34,5 +34,21 @@ namespace backend.chatbot.controllers
         return StatusCode(500, ex.Message);
       }
     }
+    [HttpPost("{sessionId}/chat/messages")]
+    public async Task<IActionResult> PostMessage([FromRoute] string sessionId, [FromBody] string userMessage)
+    {
+      if (string.IsNullOrWhiteSpace(userMessage))
+        return BadRequest("User message cannot be empty");
+
+      try
+      {
+        var chatSession = await chatBotService.sendMessageAsync(sessionId, userMessage);
+        return Ok(chatSession);
+      }
+      catch (Exception ex)
+      {
+        return StatusCode(500, ex.Message);
+      }
+    }
   }
 }

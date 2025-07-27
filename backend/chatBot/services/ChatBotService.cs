@@ -13,7 +13,7 @@ namespace backend.chatbot.services
     public ChatBotService(GeminiApiClient geminiApiClient, IMongoCollection<ChatSession> chatSessions)
     {
       _geminiApiClient = geminiApiClient;
-      _chatSessions = chatSessions; // ✅ usa o parâmetro corretamente
+      _chatSessions = chatSessions;
     }
 
     public async Task<ChatSession> createChatSessionAsync(CreateSessionDto createSessionDto)
@@ -38,5 +38,40 @@ namespace backend.chatbot.services
 
       return chatSession;
     }
+    public async Task<ChatSession> sendMessageAsync(string sessionId, string stringUserMessage)
+    {
+      var session = await _chatSessions
+                          .Find(s => s.Id == sessionId)
+                          .FirstOrDefaultAsync();
+
+      if (session == null)
+        throw new Exception("Session not found");
+
+      string prompt = PromptCreator.CreatePrompt(session.Bot.Context, stringUserMessage);
+
+      string botResponse = await _geminiApiClient.GenerateContentAsync(prompt);
+
+      var userMsg = new Message
+      {
+        Role = "user",
+        Content = stringUserMessage
+      };
+
+      var botMsg = new Message
+      {
+        Role = "bot",
+        Content = botResponse
+      };
+
+      var update = Builders<ChatSession>.Update.PushEach(s => s.Messages, new[] { userMsg, botMsg });
+
+      await _chatSessions.UpdateOneAsync(s => s.Id == sessionId, update);
+
+      session.Messages.Add(userMsg);
+      session.Messages.Add(botMsg);
+      return session;
+    }
+
+
   }
 }
