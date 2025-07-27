@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Opinions } from '../constants/opinions';
+import { Opinions } from '../../constants/opinions';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { LuBrain } from 'react-icons/lu';

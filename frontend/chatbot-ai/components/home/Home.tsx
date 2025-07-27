@@ -1,13 +1,11 @@
 import { FaBrain } from 'react-icons/fa';
 import { OpinionsCarrousel } from './OpinionsCarrousel';
 import { Button } from './Button';
-import { HomeProps } from '../types/HomeProps';
+import { HomeProps } from '../../types/HomeProps';
 import { Instructions } from './instructions';
 import { GiBrain } from 'react-icons/gi';
 import { Footer } from './Footer';
-import { LuBrain } from 'react-icons/lu';
-import { AiOutlineThunderbolt } from 'react-icons/ai';
-import { FaTools } from 'react-icons/fa';
+
 import { LightPoints } from './lightPoints';
 import { LandingPagesIcons } from './LandingPagesIcons';
 
