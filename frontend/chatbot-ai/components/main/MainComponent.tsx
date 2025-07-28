@@ -1,9 +1,15 @@
-import { HamburguerMenu } from "./HamburguerMenu";
+'use client';
+
+import { CreateChatBot } from './CreateChatBot';
+import { ChatSheet } from './HamburguerMenu';
 
 export function MainComponent() {
   return (
-    <div className="relative flex min-h-screen  w-full overflow-x-hidden flex-col items-start justify-start bg-[#000000] text-stone-200 px-5 py-5">
-      <HamburguerMenu />
+    <div className="flex min-h-screen  w-full overflow-x-hidden flex-col items-start justify-start bg-[#000000] text-stone-200 px-5 py-5">
+      <ChatSheet />
+      <div className="flex flex-col items-center justify-center w-full h-full">
+        <CreateChatBot />
+      </div>
     </div>
   );
 }
