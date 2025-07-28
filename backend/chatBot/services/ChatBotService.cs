@@ -71,6 +71,12 @@ namespace backend.chatbot.services
       session.Messages.Add(botMsg);
       return session;
     }
+    public async Task<List<ChatSession>> SearchChatAsync(int userId)
+    {
+      var filter = Builders<ChatSession>.Filter.Eq(s => s.UserId, userId);
+      var sessions = await _chatSessions.Find(filter).ToListAsync();
+      return sessions;
+    }
 
 
   }

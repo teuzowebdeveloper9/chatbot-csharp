@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\chatBot",
+    "\\chatBot\\controllers",
+    "\\chatBot\\services"
+  ],
+  "SelectedNode": "\\chatBot\\services\\ChatBotService.cs",
+  "PreviewInSolutionExplorer": false
+}

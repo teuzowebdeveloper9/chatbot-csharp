@@ -50,5 +50,23 @@ namespace backend.chatbot.controllers
         return StatusCode(500, ex.Message);
       }
     }
+    [HttpGet("chats/message/{userId}")]
+    public async Task<ActionResult<List<ChatSession>>> SearchChatById(int userId)
+    {
+      try
+      {
+        var chats = await chatBotService.SearchChatAsync(userId);
+
+        if (chats == null || !chats.Any())
+          return NotFound($"no chat with one user with id {userId}");
+
+        return Ok(chats);
+      }
+      catch (Exception ex)
+      {
+        return StatusCode(500, $"Erro interno: {ex.Message}");
+      }
+    }
+
   }
 }

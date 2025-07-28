@@ -4414,11 +4414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatbot\\chatBot.csproj",
+      "projectUniqueName": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatBot\\chatBot.csproj",
       "projectName": "chatBot",
-      "projectPath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatbot\\chatBot.csproj",
+      "projectPath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatBot\\chatBot.csproj",
       "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatbot\\obj\\",
+      "outputPath": "C:\\Users\\mateu\\Desktop\\teste-tecnico\\backend\\chatBot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config"
