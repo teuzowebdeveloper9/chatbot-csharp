@@ -1,7 +1,7 @@
 # High Capital ChatBot Project
 
 ## Table of Contents
-
+-[screenshots](#screenshots)
 - [Project Overview](#project-overview)
 - [Technologies Used](#technologies-used)
 - [Architecture](#architecture)
@@ -19,6 +19,43 @@
 - [Additional Notes](#additional-notes)
 
 ---
+
+## screenshots
+
+<img width="1348" height="634" alt="image" src="https://github.com/user-attachments/assets/476fe79a-0c70-4058-94c2-f7eefaaca0b8" />
+<img width="1347" height="634" alt="image" src="https://github.com/user-attachments/assets/eada4196-c81f-4ec4-aadb-5f67486c3a8a" />
+<img width="1344" height="624" alt="image" src="https://github.com/user-attachments/assets/f58004ae-0c00-4c86-96aa-7214b28f45d0" />
+- Here I used a lot of a recent course I took
+
+<img width="1355" height="633" alt="image" src="https://github.com/user-attachments/assets/b0fe855c-6371-4c87-b0ae-c3c3fc2276bd" />
+<img width="1348" height="624" alt="image" src="https://github.com/user-attachments/assets/a3e93ce3-d19e-4c68-9334-c41118d351b1" />
+<img width="1366" height="663" alt="image" src="https://github.com/user-attachments/assets/7a50e550-86cc-4841-ae61-762aa6833850" />
+- in the black box of this hamburger menu the names are brought from the backend coming from a fetch that is done in a useEffect that is done before the page loads I used this to avoid fields without data in the interface if you click it takes you to the chat
+
+<img width="1355" height="286" alt="image" src="https://github.com/user-attachments/assets/99a98645-e0da-4ede-b140-4ffadf6ef8f7" />
+- the url id is the same as the one that comes from the backend and it is shown in the interface of all chats
+
+<img width="957" height="129" alt="image" src="https://github.com/user-attachments/assets/a6e66826-429e-42b8-86ad-08985db15f85" />
+- When you log in you get this cookie that will be responsible for guiding your routing through pages controlled by a context called authContext
+
+<img width="1347" height="677" alt="image" src="https://github.com/user-attachments/assets/739866d4-dc4d-4013-82c3-8727b5c2e3ac" />
+
+# mobile
+
+-I had a different experience for all types of screens
+
+<img width="212" height="454" alt="image" src="https://github.com/user-attachments/assets/14b4f0b2-1d1a-42fa-9296-edc2a12995a5" />
+<img width="208" height="450" alt="image" src="https://github.com/user-attachments/assets/0da92cab-2092-4d98-9133-09bd48a37f9a" />
+<img width="209" height="444" alt="image" src="https://github.com/user-attachments/assets/e2b83a8f-79f1-4a7c-862c-cd109b164a5a" />
+<img width="206" height="448" alt="image" src="https://github.com/user-attachments/assets/2656ee03-2d76-4b46-ba04-fc4a3f10d488" />
+
+
+- database
+
+<img width="970" height="511" alt="image" src="https://github.com/user-attachments/assets/5157d9d7-63ae-4828-ac93-acdcd149e600" />
+<img width="1356" height="685" alt="image" src="https://github.com/user-attachments/assets/c1320e6d-2e5c-448a-adc6-bdb7cd19b0b8" />
+
+
 
 ## Project Overview
 
