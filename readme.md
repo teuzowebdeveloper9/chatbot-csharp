@@ -188,3 +188,7 @@ Next.js dynamic routing with [param] folders simplifies chat session navigation 
 - The AI chatbot model referenced is Gemini Flash 2.5.
 - The backend .http file can be used to explore and test API endpoints manually.
 - The project was developed as a technical test for High Capital and references the company in the frontend UI.
+- 
+### Desenvolvido por
+
+- [@teuzowebdeveloper9](https://github.com/teuzowebdeveloper9)
