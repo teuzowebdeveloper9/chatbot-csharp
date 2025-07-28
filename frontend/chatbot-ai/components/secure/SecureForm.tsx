@@ -1,14 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { LoginFormProps } from '../../types/LoginFormProps';
 import { MobileLeadingPageIcons } from './MobileLeadingPageIcons';
 import { SmallButton } from './SmallButton';
 import { HandleLogin } from '../../utils/handleLogin';
 import { HandleRegister } from '../../utils/handleRegister';
+import { AuthContext } from '../../context/AuthContext';
 
 export function SecureForm({ login, onClick }: LoginFormProps) {
   const [errorMessage, setErrorMessage] = useState('');
+
+  const { signin,loggedUser } = useContext(AuthContext);
+  useEffect(() => {
+     if (loggedUser) {
+      loggedUser();
+    }
+  }, [])
 
   const [form, setForm] = useState({
     name: '',
@@ -28,7 +36,11 @@ export function SecureForm({ login, onClick }: LoginFormProps) {
     <>
       <MobileLeadingPageIcons />
       <div className="flex flex-col px-8 py-5 w-[300px] min-h-[350px] bg-[#080736] rounded-md shadow-lg border-2 mb-5 border-solid border-[#000000]">
-        {errorMessage && <p className="text-red-500 mb-2 ">{errorMessage}</p>}
+        {errorMessage && (
+          <p className="text-red-500 mb-2 font-bold justify-center items-center flex">
+            {errorMessage}
+          </p>
+        )}
         <h1 className="text-2xl font-bold text-stone-200 justify-center items-center flex">
           {login ? 'login' : 'register'}
         </h1>
@@ -75,16 +87,25 @@ export function SecureForm({ login, onClick }: LoginFormProps) {
                   Email: form.email,
                   Password: form.password,
                 });
+                if (res.status == 500) {
+                  setErrorMessage('erro nas credencias tente novamente');
+                }
+                signin(res.data);
               } else {
                 const res = await HandleRegister({
                   Email: form.email,
                   Name: form.name,
                   Password: form.password,
                 });
+
+                if (res.status == 500) {
+                  setErrorMessage('erro nas credencias tente novamente');
+                }
+
+                signin(res.data);
               }
             } catch (error) {
-              const msg = error.response?.data?.message || 'Erro inesperado.';
-              setErrorMessage(msg);
+              setErrorMessage('não autorizado, tente novamente');
             }
           }}
         />

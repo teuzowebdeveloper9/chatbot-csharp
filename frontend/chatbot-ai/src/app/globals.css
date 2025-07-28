@@ -37,7 +37,7 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-@keyframes float {
+@keyframes float-slow {
   0%,
   100% {
     transform: translateY(0);
@@ -47,5 +47,5 @@ body {
   }
 }
 .animate-float-slow {
-  animation: float 3s ease-in-out infinite;
+  animation: float-slow 3s ease-in-out infinite;
 }
