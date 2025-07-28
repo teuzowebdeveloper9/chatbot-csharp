@@ -1,6 +1,7 @@
 # High Capital ChatBot Project
 
 ## Table of Contents
+
 -[screenshots](#screenshots)
 - [Project Overview](#project-overview)
 - [Technologies Used](#technologies-used)
