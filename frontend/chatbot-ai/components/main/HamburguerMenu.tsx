@@ -29,8 +29,8 @@ export function ChatSheet() {
         const response = await getChat(id);
         console.log('response =>', response);
 
-        if (Array.isArray(response)) {
-          setChats(response);
+        if (Array.isArray(response?.data)) {
+          setChats(response?.data);
         } else {
           setChats([]);
         }
@@ -66,14 +66,18 @@ export function ChatSheet() {
           ) : (
             chats.map((chat, index) => (
               <div
+                
                 key={chat.id || index}
-                className="p-2 border rounded bg-gray-100"
+                className="p-5 mb-5 border rounded-md bg-black"
+                onClick={() => {
+                 window.location.href = `http://localhost:3000/${chat.id}/chat`;
+                }}             
               >
                 <p className="font-semibold text-stone-200">
                   Bot: {chat.bot?.name}
                 </p>
                 <p className="font-semibold text-stone-200">
-                  context : {chat.context}
+                  context : {chat.bot?.context}
                 </p>
               </div>
             ))
