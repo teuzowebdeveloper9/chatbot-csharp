@@ -15,8 +15,8 @@ export default function ChatPage({ params }: { params: { chatId: string } }) {
   const auth = useContext(AuthContext);
   const [messages, setMessages] = useState([]);
   const [digitable, setdigitable] = useState('');
-  
-  const router = useRouter()
+
+  const router = useRouter();
 
   useEffect(() => {
     if (auth?.loadUser) {
@@ -32,9 +32,9 @@ export default function ChatPage({ params }: { params: { chatId: string } }) {
   }, [chatId]);
 
   async function reload() {
-  const { messages } = await GetMessages(chatId);
-  setMessages(messages);
-}
+    const { messages } = await GetMessages(chatId);
+    setMessages(messages);
+  }
 
   function handleChangeText(event: ChangeEvent<HTMLTextAreaElement>): void {
     event.preventDefault();
