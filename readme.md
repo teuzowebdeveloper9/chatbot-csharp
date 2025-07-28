@@ -168,6 +168,8 @@ Example MongoDB document structure for a chat session:
 - React context is used to manage user authentication state and pass the user ID throughout the app.
 - Axios is used for making HTTP requests to the backend API.
 - Cookies are used to persist user login sessions securely.
+- prettier to keep my code readable with my npm run prettier script
+- I used useEmbla to make a beautiful, functional, and responsive carousel
 
 ## Running the Project
 
