@@ -11,12 +11,12 @@ import { AuthContext } from '../../context/AuthContext';
 export function SecureForm({ login, onClick }: LoginFormProps) {
   const [errorMessage, setErrorMessage] = useState('');
 
-  const { signin,loggedUser } = useContext(AuthContext);
+  const { signin, loggedUser } = useContext(AuthContext);
   useEffect(() => {
-     if (loggedUser) {
+    if (loggedUser) {
       loggedUser();
     }
-  }, [])
+  }, []);
 
   const [form, setForm] = useState({
     name: '',

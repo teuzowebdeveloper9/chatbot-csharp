@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { createContext, useEffect, useState } from 'react';
 import { AuthContextType } from '../interfaces/AuthContextType';
@@ -11,7 +11,7 @@ export const AuthContext = createContext<AuthContextType | null>(null);
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<UserTypes | null>(null);
 
-    const loadUser = async () => {
+  const loadUser = async () => {
     const userCookie = await Cookie.get('user-token');
     if (!userCookie) {
       console.log('you are not logged');
@@ -19,21 +19,25 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     } else {
       const parsedUser = JSON.parse(userCookie);
       setUser(parsedUser);
-      console.log('You are logged in, stay in this state to enjoy the application');
+      console.log(
+        'You are logged in, stay in this state to enjoy the application'
+      );
     }
   };
 
   const loggedUser = async () => {
-     const userCookie = await Cookie.get('user-token');
-     
-     if(userCookie){
-        console.log('your status is logged in I will redirect you to the home page')
-         window.location.href = 'http://localhost:3000/home'
-     }
-  }
+    const userCookie = await Cookie.get('user-token');
+
+    if (userCookie) {
+      console.log(
+        'your status is logged in I will redirect you to the home page'
+      );
+      window.location.href = 'http://localhost:3000/home';
+    }
+  };
 
   const signin = async (user: UserTypes) => {
-    console.log('logged in')
+    console.log('logged in');
     await Cookie.set('user-token', JSON.stringify(user), { expires: 10 });
     setUser(user);
   };
@@ -44,7 +48,9 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, signin, signOut, loadUser,loggedUser }}>
+    <AuthContext.Provider
+      value={{ user, signin, signOut, loadUser, loggedUser }}
+    >
       {children}
     </AuthContext.Provider>
   );
