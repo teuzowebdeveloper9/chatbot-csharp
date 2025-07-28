@@ -67,6 +67,24 @@ namespace backend.chatbot.controllers
         return StatusCode(500, $"Erro interno: {ex.Message}");
       }
     }
+    [HttpGet("session/{sessionId}/messages")]
+    public async Task<ActionResult<List<Message>>> GetMessagesFromSession(string sessionId)
+    {
+      try
+      {
+        var messages = await chatBotService.GetMessagesFromSessionAsync(sessionId);
+        if (messages == null)
+          return NotFound("Chat session not found");
+
+        return Ok(messages);
+      }
+      catch (Exception ex)
+      {
+        return StatusCode(500, $"Erro interno: {ex.Message}");
+      }
+    }
+
 
   }
+
 }

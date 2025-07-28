@@ -62,16 +62,17 @@ export function ChatSheet() {
           {loading ? (
             <p className="text-gray-500">loading...</p>
           ) : chats.length === 0 ? (
-            <p className="text-red-500 font-bold p-5">no chats found click in "create one chat"</p>
+            <p className="text-red-500 font-bold p-5">
+              no chats found click in "create one chat"
+            </p>
           ) : (
             chats.map((chat, index) => (
               <div
-                
                 key={chat.id || index}
                 className="p-5 mb-5 border rounded-md bg-black"
                 onClick={() => {
-                 window.location.href = `http://localhost:3000/${chat.id}/chat`;
-                }}             
+                  window.location.href = `http://localhost:3000/${chat.id}/chat`;
+                }}
               >
                 <p className="font-semibold text-stone-200">
                   Bot: {chat.bot?.name}
