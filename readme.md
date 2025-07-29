@@ -90,6 +90,7 @@ Both databases run inside Docker containers for easy deployment and management.
   - Shadcn UI (component library)
   - Axios (for HTTP requests)
   - Browser cookies (for authentication persistence)
+  - tailwhindcss
 - **AI Model:**
   - Gemini Flash 2.5 (used as chatbot model reference)
 
