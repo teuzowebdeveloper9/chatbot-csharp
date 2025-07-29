@@ -3,6 +3,7 @@
 ## Table of Contents
 
 -[screenshots](#screenshots)
+
 - [Project Overview](#project-overview)
 - [Technologies Used](#technologies-used)
 - [Architecture](#architecture)
@@ -53,13 +54,10 @@
 <img width="209" height="444" alt="image" src="https://github.com/user-attachments/assets/e2b83a8f-79f1-4a7c-862c-cd109b164a5a" />
 <img width="206" height="448" alt="image" src="https://github.com/user-attachments/assets/2656ee03-2d76-4b46-ba04-fc4a3f10d488" />
 
-
 - database
 
 <img width="970" height="511" alt="image" src="https://github.com/user-attachments/assets/5157d9d7-63ae-4828-ac93-acdcd149e600" />
 <img width="1356" height="685" alt="image" src="https://github.com/user-attachments/assets/c1320e6d-2e5c-448a-adc6-bdb7cd19b0b8" />
-
-
 
 ## Project Overview
 
@@ -154,6 +152,36 @@ Example MongoDB document structure for a chat session:
 - Creating, fetching, and deleting chat sessions
 - A .http file is included in the backend project to help understand and test API routes.
 
+## Unit Tests
+
+### UserController Tests
+
+The project includes unit tests for the UserController using xUnit and Moq. These tests ensure the correct behavior of the user registration process.
+
+#### Test Case: Register_DeveRetornarCreated_QuandoUsuarioEhCriado
+
+This test verifies that the `Register` method in the `UserController` returns a `CreatedResult` with a status code of 201 when a user is successfully created.
+
+**Test Setup:**
+
+- Uses Moq to create a mock `IUserService`
+- Creates a `CreateUserDto` with sample user data
+- Sets up the mock service to return a `User` object when `RegisterUserAsync` is called
+
+**Test Execution:**
+
+- Calls the `Register` method on the `UserController` with the sample DTO
+- Asserts that the result is a `CreatedResult`
+- Verifies that the status code of the result is 201 (Created)
+
+**Technologies Used:**
+
+- xUnit for test framework
+- Moq for mocking dependencies
+- Microsoft.AspNetCore.Mvc for controller-related types
+
+This test ensures that the user registration process works correctly and returns the expected result when a new user is created successfully.
+
 # Frontend
 
 - Routing and Navigation
@@ -231,7 +259,7 @@ Next.js dynamic routing with [param] folders simplifies chat session navigation 
 - The AI chatbot model referenced is Gemini Flash 2.5.
 - The backend .http file can be used to explore and test API endpoints manually.
 - The project was developed as a technical test for High Capital and references the company in the frontend UI.
-- 
+
 ### Desenvolvido por
 
 - [@teuzowebdeveloper9](https://github.com/teuzowebdeveloper9)
