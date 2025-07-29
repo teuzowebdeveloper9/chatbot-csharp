@@ -190,12 +190,27 @@ This test ensures that the user registration process works correctly and returns
 
 # Frontend
 
+
+
+
+
 - Routing and Navigation
 - Built with Next.js using the App Router strategy.
 - Dynamic routes are implemented using folder names with square brackets [] to handle variable parameters (e.g., chat IDs).
 - This routing strategy simplifies fetching and displaying chat messages based on URL parameters.
 
 ## UI and State Management
+
+ ## 🎨 Visual Identity
+
+The project was designed with a clear visual identity, using intuitive symbols:
+
+- 🧠 Intelligence: Represents the AI model behind the chatbots
+- ⚡ Speed: Reflects the real-time and fluidity of responses
+- 🛠️ Utility: Reflects the versatility of AI in different contexts
+
+ # The interface uses dynamic visual effects (floating light points) to convey a modern, technological, and interactive atmosphere.
+
 
 - Uses Shadcn UI for fast and consistent component styling.
 - Implements a dark theme for modern look and feel.
