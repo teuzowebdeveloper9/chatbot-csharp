@@ -20,7 +20,7 @@ namespace units.tests.controllers
       var dto = new CreateUserDto
       {
         Name = "Teuzo",
-        Email = "teuzo@example.com",
+        Email = "teuzowebdeveloper@gmail.com",
         Password = "123456"
       };
 
