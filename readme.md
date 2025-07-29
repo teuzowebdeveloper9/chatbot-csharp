@@ -40,6 +40,10 @@
 <img width="957" height="129" alt="image" src="https://github.com/user-attachments/assets/a6e66826-429e-42b8-86ad-08985db15f85" />
 - When you log in you get this cookie that will be responsible for guiding your routing through pages controlled by a context called authContext
 
+
+<img width="1366" height="634" alt="image" src="https://github.com/user-attachments/assets/96f83864-4ed0-4129-9861-7c733e162899" />
+- I also thought about having several chat bots and in that case there will be a vertical scroll
+
 <img width="1347" height="677" alt="image" src="https://github.com/user-attachments/assets/739866d4-dc4d-4013-82c3-8727b5c2e3ac" />
 
 # mobile
