@@ -2,15 +2,16 @@ using Microsoft.AspNetCore.Mvc;
 using backend.chatbot.DTOs;
 using backend.chatbot.services;
 
+
 namespace backend.chatbot.controllers
 {
   [ApiController]
   [Route("api/users")]
   public class UserController : ControllerBase
   {
-    private readonly UserService _userService;
+    private readonly IUserService _userService;
 
-    public UserController(UserService userService)
+    public UserController(IUserService userService)
     {
       _userService = userService;
     }

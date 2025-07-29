@@ -13,6 +13,8 @@ builder.Services.AddSingleton<IMongoClient>(sp =>
     return new MongoClient(connectionString);
 });
 
+builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.AddScoped<IMongoDatabase>(sp =>
 {
     var mongoClient = sp.GetRequiredService<IMongoClient>();

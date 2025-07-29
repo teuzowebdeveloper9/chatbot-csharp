@@ -4,9 +4,10 @@ using backend.chatbot.models;
 using backend.chatbot.utils;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace backend.chatbot.services
 {
-  public class UserService
+  public class UserService : IUserService
   {
     private readonly AppContextPostgres context;
 
