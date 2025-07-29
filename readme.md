@@ -23,7 +23,7 @@
 ---
 
 ## screenshots
-
+<img width="1098" height="142" alt="image" src="https://github.com/user-attachments/assets/38fd585d-f61e-4b0b-a2af-89acb22316b6" />
 <img width="1348" height="634" alt="image" src="https://github.com/user-attachments/assets/476fe79a-0c70-4058-94c2-f7eefaaca0b8" />
 <img width="1347" height="634" alt="image" src="https://github.com/user-attachments/assets/eada4196-c81f-4ec4-aadb-5f67486c3a8a" />
 <img width="1344" height="624" alt="image" src="https://github.com/user-attachments/assets/f58004ae-0c00-4c86-96aa-7214b28f45d0" />
@@ -62,6 +62,7 @@
 
 <img width="970" height="511" alt="image" src="https://github.com/user-attachments/assets/5157d9d7-63ae-4828-ac93-acdcd149e600" />
 <img width="1356" height="685" alt="image" src="https://github.com/user-attachments/assets/c1320e6d-2e5c-448a-adc6-bdb7cd19b0b8" />
+
 
 ## Project Overview
 
