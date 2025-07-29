@@ -51,14 +51,14 @@ export function ChatSheet() {
       <SheetTrigger>
         <Menu className="w-6 h-6" />
       </SheetTrigger>
-      <SheetContent side="left">
+      <SheetContent side="left" className="h-full p-4">
         <SheetHeader>
           <SheetTitle>
             <h1 className="font-bold text-black text-xl">your chats</h1>
           </SheetTitle>
         </SheetHeader>
 
-        <div className="flex flex-col gap-4 mt-4">
+        <div className="flex flex-col gap-4 mt-4 overflow-y-auto max-h-[calc(100vh-150px)]">
           {loading ? (
             <p className="text-gray-500">loading...</p>
           ) : chats.length === 0 ? (
@@ -69,7 +69,7 @@ export function ChatSheet() {
             chats.map((chat, index) => (
               <div
                 key={chat.id || index}
-                className="p-5 mb-5 border rounded-md bg-black"
+                className="p-5 mb-5 border rounded-md bg-black "
                 onClick={() => {
                   window.location.href = `http://localhost:3000/${chat.id}/chat`;
                 }}
